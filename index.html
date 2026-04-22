@@ -118,7 +118,7 @@
     }
     .programa-header {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       background: var(--navy);
       color: var(--white);
       font-weight: 700;
@@ -136,7 +136,7 @@
 
     .programa-row {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       border-bottom: 1px solid #eee;
       font-size: 0.88rem;
     }
@@ -429,26 +429,31 @@
       <div>Actividad</div>
       <div class="opt-label">Opción 1</div>
       <div class="opt-label">Opción 2</div>
+      <div class="opt-label">Opción 3</div>
     </div>
     <div class="programa-row">
       <div><span class="time-label">12 – 1:30 pm</span>Misa y Bienvenida</div>
       <div>Iglesia San Felipe Apóstol</div>
+      <div>Hacienda Monterrico</div>
       <div>Real Club (Teatro del Club)</div>
     </div>
     <div class="programa-row">
       <div><span class="time-label">1:30 – 5 pm</span>Almuerzo de Confraternidad</div>
       <div>Chifa Royal</div>
+      <div>Terraza Grill Hacienda MonteRico</div>
       <div>Real Club (Rest. San Telmo)</div>
     </div>
     <div class="programa-row">
       <div><span class="time-label">5 – 8 pm</span>Tarde de Reencuentro</div>
       <div>Casa de Duilio</div>
+      <div>Terraza Grill Hacienda MonteRico</div>
       <div>Casa de Duilio</div>
     </div>
     <div class="programa-row costo-row">
       <div class="label" style="text-align:right; padding-right:0.5rem;">Costo total:</div>
       <div>S/ 200<br><small style="font-weight:400;font-size:0.75rem;">2 cuotas de S/100</small></div>
-      <div>S/ 300<br><small style="font-weight:400;font-size:0.75rem;">3 cuotas de S/100</small></div>
+      <div>S/ 250<br><small style="font-weight:400;font-size:0.75rem;">3 cuotas (S/100, S/100, S/50)</small></div>
+      <div>S/ 300<br><small style="font-weight:400;font-size:0.75rem;">3 cuotas (S/100, S/100, S/50)</small></div>
     </div>
   </div>
 </div>
@@ -474,7 +479,7 @@
     <!-- Misa -->
     <div class="venue-block">
       <div class="venue-time">12:00 – 1:30 pm · Misa y Bienvenida</div>
-      <div class="venue-name">Iglesia San Felipe Apóstol</div>
+      <div class="venue-name">Iglesia en San Isidro (a confirmarse)</div>
       <ul class="venue-list">
         <li>Misa en San Isidro (a confirmarse)</li>
         <li>Tributo a nuestra promoción, con énfasis en los que han partido</li>
@@ -502,11 +507,6 @@
         <li>Derecho de corcho incluido</li>
         <li>Transporte a Casa de Duilio (bus)</li>
       </ul>
-      <div class="cuotas">
-        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
-        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
-        <div class="total"><span>TOTAL</span><span>S/ 200</span></div>
-      </div>
     </div>
 
     <!-- Celebración -->
@@ -519,6 +519,11 @@
         <li>Recordatorios</li>
         <li>Corcho libre</li>
       </ul>
+      <div class="cuotas">
+        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
+        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
+        <div class="total"><span>TOTAL</span><span>S/ 200</span></div>
+      </div>
     </div>
   </div>
 
@@ -526,6 +531,76 @@
   <div class="option-section">
     <div class="option-header">
       <div class="option-badge">2</div>
+      <div>
+        <div class="option-header-title">Hacienda MonteRico</div>
+      </div>
+      <div class="option-header-cost">
+        <strong>S/ 250</strong>
+        3 cuotas (S/100, S/100, S/50)
+      </div>
+    </div>
+
+    <!-- Misa -->
+    <div class="venue-block">
+      <div class="venue-time">11:00 – 12:30 pm · Misa y Bienvenida</div>
+      <div class="venue-name">Hacienda MonteRico (lugar privado y exclusivo para la prom)</div>
+      <ul class="venue-list">
+        <li>Misa</li>
+        <li>Tributo a nuestra promoción, con énfasis en los que han partido</li>
+        <li>Presentación de la Prom XXXV</li>
+        <li>Foto de grupo</li>
+        <li>Traslado a Terraza Grill</li>
+      </ul>
+      <div class="venue-note">Esta parte de la actividad se realiza antes de que ingresen los clientes de otros grupos.</div>
+    </div>
+
+    <!-- Almuerzo -->
+    <div class="venue-block">
+      <div class="venue-time">12:30 – 6:00 pm · Almuerzo de Confraternidad</div>
+      <div class="venue-name">Terraza Grill Hacienda MonteRico</div>
+      <ul class="venue-list">
+        <li><strong>Bebidas:</strong></li>
+        <li class="sub">01 Pisco Sour</li>
+        <li><strong>Piqueos · Buffet · Postre · Refresco · Corcho libre</strong></li>
+        <li><strong>Buffet criollo:</strong></li>
+        <li class="sub">Cebiche de pescado con pesca del día</li>
+        <li class="sub">Causa rellena de pollo brasa</li>
+        <li class="sub">Tamalito verde</li>
+        <li class="sub">Ensalada solterito</li>
+        <li class="sub">Lomo saltado</li>
+        <li class="sub">Seco de carne</li>
+        <li class="sub">Ají de gallina</li>
+        <li class="sub">Chicharrón de cerdo</li>
+        <li class="sub">Arroz con choclo</li>
+        <li><strong>Postre</strong></li>
+        <li>Corcho libre</li>
+      </ul>
+    </div>
+
+    <!-- Celebración -->
+    <div class="venue-block">
+      <div class="venue-time">6:00 – 8:00 pm · Tarde de Reencuentro y Celebración</div>
+      <div class="venue-name">Terraza Grill Hacienda MonteRico</div>
+      <ul class="venue-list">
+        <li>Recordatorios</li>
+        <li>Corcho libre</li>
+      </ul>
+      <div class="cuotas">
+        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
+        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
+        <div><span>Cuota #3 (31 de julio)</span><span>S/ 50</span></div>
+        <div class="total"><span>TOTAL</span><span>S/ 250</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="option-section">
+    <div class="option-header">
+      <div class="option-badge">3</div>
       <div>
         <div class="option-header-title">Real Club · San Telmo · Casa de Duilio</div>
       </div>
@@ -574,12 +649,6 @@
         <li>Opción de cambiar platos para quienes no coman carne (aviso anticipado)</li>
         <li>Traslado a Casa de Duilio (caminando, 9 cuadras)</li>
       </ul>
-      <div class="cuotas">
-        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
-        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
-        <div><span>Cuota #3 (31 de julio)</span><span>S/ 100</span></div>
-        <div class="total"><span>TOTAL</span><span>S/ 300</span></div>
-      </div>
     </div>
 
     <!-- Celebración -->
@@ -592,9 +661,17 @@
         <li>Recordatorios</li>
         <li>Corcho libre</li>
       </ul>
+      <div class="cuotas">
+        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
+        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
+        <div><span>Cuota #3 (31 de julio)</span><span>S/ 100</span></div>
+        <div class="total"><span>TOTAL</span><span>S/ 300</span></div>
+      </div>
     </div>
   </div>
 </div>
+
+  <!-- ══ OPCION 3 ══ -->
 
 <div class="gold-divider" style="max-width:780px;margin:0 auto 0.5rem;"></div>
 
@@ -630,13 +707,24 @@
         </tr>
         <tr>
           <td class="opt-num">2</td>
-          <td class="left">Rest. San Telmo<br><small style="color:#888;font-weight:400;">1:30 – 5 pm</small></td>
+          <td class="left">Hacienda Monterrico<br><small style="color:#888;font-weight:400;">12:30 – 6 pm</small></td>
           <td>Terraza abierta con vista</td>
           <td>Ventilación natural + ventilador</td>
           <td><span class="tag green">Sí</span></td>
           <td><span class="tag yellow">Limitado<br>(vol. bajo)</span></td>
           <td><span class="tag red">No</span></td>
           <td><span class="tag red">No (video se muestra antes del almuerzo)</span></td>
+          <td><span class="tag green">Sí</span></td>
+        </tr>
+        <tr>
+          <td class="opt-num">3</td>
+          <td class="left">Rest. San Telmo<br><small style="color:#888;font-weight:400;">1:30 – 5 pm</small></td>
+          <td>Terraza abierta / jardín</td>
+          <td>Ventilación natural</td>
+          <td><span class="tag green">Sí</span></td>
+          <td><span class="tag yellow">Limitado<br>(vol. bajo)</span></td>
+          <td><span class="tag yellow">A confirmar</span></td>
+          <td><span class="tag yellow">A confirmar</span></td>
           <td><span class="tag green">Sí</span></td>
         </tr>
       </tbody>
@@ -661,12 +749,12 @@
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <div class="step-text">Emite tu voto eligiendo <strong style="color:var(--gold-light);">Opción 1</strong> u <strong style="color:var(--gold-light);">Opción 2</strong>.</div>
+      <div class="step-text">Emite tu voto eligiendo <strong style="color:var(--gold-light);">Opción 1</strong>, <strong style="color:var(--gold-light);">Opción 2</strong> u <strong style="color:var(--gold-light);">Opción 3</strong>.</div>
     </div>
 
     <div class="deadline-box">
       ⏰ Fecha límite para votar:
-      <strong>Martes, 28 de Abril de 2026</strong>
+      <strong>Miércoles, 29 de Abril de 2026</strong>
     </div>
   </div>
 </div>
@@ -674,6 +762,4 @@
 <footer>
   Maristas San Isidro · Prom XXXV · 50 Aniversario
 </footer>
-
 </body>
-</html>
