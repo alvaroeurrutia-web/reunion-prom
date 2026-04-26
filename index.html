@@ -118,7 +118,7 @@
     }
     .programa-header {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       background: var(--navy);
       color: var(--white);
       font-weight: 700;
@@ -136,7 +136,7 @@
 
     .programa-row {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       border-bottom: 1px solid #eee;
       font-size: 0.88rem;
     }
@@ -449,30 +449,25 @@
       <div>Actividad</div>
       <div class="opt-label">Opción 1</div>
       <div class="opt-label">Opción 2</div>
-      <div class="opt-label">Opción 3</div>
     </div>
     <div class="programa-row">
       <div>Misa y Bienvenida</div>
       <div><span class="time-label">12 – 1:30 pm</span>Iglesia en San Isidro<br><small style="font-weight:400;color:#888;">(local a confirmarse)</small></div>
-      <div><span class="time-label">11 – 12:30 pm</span>Hacienda MonteRico<br><small style="font-weight:400;color:#888;">(área privada y exclusiva)</small></div>
       <div><span class="time-label">12 – 1:30 pm</span>Real Club<br><small style="font-weight:400;color:#888;">(Teatro del Club)</small></div>
     </div>
     <div class="programa-row">
       <div>Almuerzo de Confraternidad</div>
       <div><span class="time-label">1:30 – 5 pm</span>Chifa Royal<br><small style="font-weight:400;color:#888;">(San Isidro)</small></div>
-      <div><span class="time-label">12:30 – 3 pm</span>Hacienda MonteRico<br><small style="font-weight:400;color:#888;">(Terraza Grill)</small></div>
       <div><span class="time-label">1:30 – 5 pm</span>Real Club<br><small style="font-weight:400;color:#888;">(Rest. San Telmo)</small></div>
     </div>
     <div class="programa-row">
       <div>Tarde de Reencuentro</div>
       <div><span class="time-label">5 – 8 pm</span>Casa de Duilio<br><small style="font-weight:400;color:#888;">(San Isidro)</small></div>
-      <div><span class="time-label">3 – 6 pm</span>Hacienda MonteRico<br><small style="font-weight:400;color:#888;">(Terraza Grill)</small></div>
       <div><span class="time-label">5 – 8 pm</span>Casa de Duilio<br><small style="font-weight:400;color:#888;">(San Isidro)</small></div>
     </div>
     <div class="programa-row costo-row">
       <div class="label" style="text-align:right; padding-right:0.5rem;">Costo total:</div>
       <div>S/ 200<br><small style="font-weight:400;font-size:0.75rem;">2 cuotas de S/100</small></div>
-      <div>S/ 250<br><small style="font-weight:400;font-size:0.75rem;">3 cuotas (S/100, S/100, S/50)</small></div>
       <div>S/ 300<br><small style="font-weight:400;font-size:0.75rem;">3 cuotas (S/100, S/100, S/100)</small></div>
     </div>
   </div>
@@ -560,74 +555,6 @@
   <div class="option-section">
     <div class="option-header">
       <div class="option-badge">2</div>
-      <div>
-        <div class="option-header-title">Hacienda MonteRico</div>
-      </div>
-      <div class="option-header-cost">
-        <strong>S/ 250</strong>
-        3 cuotas (S/100, S/100, S/50)
-      </div>
-    </div>
-
-    <!-- Misa -->
-    <div class="venue-block">
-      <div class="venue-time">11:00 – 12:30 pm · Misa y Bienvenida</div>
-      <div class="venue-name">Hacienda MonteRico (lugar privado y exclusivo para la prom)</div>
-      <ul class="venue-list">
-        <li>Misa con tributo a los que han partido</li>
-        <li>Presentación / video de la Prom XXXV</li>
-        <li>Foto de grupo</li>
-        <li>Traslado a Terraza Grill</li>
-      </ul>
-    </div>
-
-    <!-- Almuerzo -->
-    <div class="venue-block">
-      <div class="venue-time">12:30 – 3 pm · Almuerzo de Confraternidad</div>
-      <div class="venue-name">Terraza Grill Hacienda MonteRico</div>
-      <ul class="venue-list">
-        <li><strong>Bebidas:</strong></li>
-        <li class="sub">01 Pisco Sour</li>
-        <li class="sub">Refresco incluido</li>
-        <li class="sub">Corcho libre</li>
-        <li><strong>Piqueos / Buffet criollo:</strong></li>
-        <li class="sub">Cebiche de pescado con pesca del día</li>
-        <li class="sub">Causa rellena de pollo brasa</li>
-        <li class="sub">Tamalito verde</li>
-        <li class="sub">Ensalada solterito</li>
-        <li class="sub">Lomo saltado</li>
-        <li class="sub">Seco de carne</li>
-        <li class="sub">Ají de gallina</li>
-        <li class="sub">Chicharrón de cerdo</li>
-        <li class="sub">Arroz con choclo</li>
-        <li><strong>Postre</strong></li>
-      </ul>
-    </div>
-
-    <!-- Celebración -->
-    <div class="venue-block">
-      <div class="venue-time">3 – 6 pm · Tarde de Reencuentro y Celebración</div>
-      <div class="venue-name">Terraza Grill Hacienda MonteRico</div>
-      <ul class="venue-list">
-        <li>Recordatorios</li>
-        <li>Corcho libre</li>
-      </ul>
-      <div class="cuotas-title">Cuotas de pago</div>
-      <div class="cuotas">
-        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
-        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
-        <div><span>Cuota #3 (31 de julio)</span><span>S/ 50</span></div>
-        <div class="total"><span>TOTAL</span><span>S/ 250</span></div>
-      </div>
-      <div class="cuotas-note">Se apreciará abonar las cuotas en o antes de las fechas indicadas. Esto permitirá el flujo de caja necesario para el financiamiento de múltiples aspectos a lo largo del año.</div>
-    </div>
-  </div>
-</div>
-
-<div class="section" style="padding-top:0;">
-  <div class="option-section">
-    <div class="option-header">
-      <div class="option-badge">3</div>
       <div>
         <div class="option-header-title">Real Club · San Telmo · Casa de Duilio</div>
       </div>
@@ -719,39 +646,33 @@
         <tr>
           <th class="left" style="min-width:80px;">Momento</th>
           <th>Opción 1<br><small style="font-weight:400;color:var(--gold-light);">Chifa Royal</small></th>
-          <th>Opción 2<br><small style="font-weight:400;color:var(--gold-light);">Hacienda MonteRico</small></th>
-          <th>Opción 3<br><small style="font-weight:400;color:var(--gold-light);">Real Club</small></th>
+          <th>Opción 2<br><small style="font-weight:400;color:var(--gold-light);">Real Club</small></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="left" style="font-weight:700;color:var(--navy);">Pre-almuerzo<br><small style="font-weight:400;color:var(--gray);">Misa y Bienvenida</small></td>
           <td>Iglesia en San Isidro<br><small style="color:#888;">Local a confirmarse</small></td>
-          <td>Hacienda MonteRico<br><small style="color:#888;">Área exclusiva para la prom</small></td>
           <td>Teatro del Real Club<br><small style="color:#888;">Exclusivo para la prom</small></td>
         </tr>
         <tr>
           <td class="left" style="font-weight:700;color:var(--navy);">Almuerzo</td>
           <td>Chifa Royal<br><small style="color:#888;">Ambiente cerrado, AC</small></td>
-          <td>Terraza Grill<br><small style="color:#888;">Terraza abierta, al aire libre</small></td>
           <td>Rest. San Telmo<br><small style="color:#888;">Terraza abierta con vista</small></td>
         </tr>
         <tr>
           <td class="left" style="font-weight:700;color:var(--navy);">Post-almuerzo<br><small style="font-weight:400;color:var(--gray);">Tarde de reencuentro</small></td>
           <td>Casa de Duilio<br><small style="color:#888;">Local independiente</small></td>
-          <td>Terraza Grill<br><small style="color:#888;">Mismo local del almuerzo</small></td>
           <td>Casa de Duilio<br><small style="color:#888;">Local independiente</small></td>
         </tr>
         <tr>
           <td class="left" style="font-weight:700;color:var(--navy);">Traslados</td>
           <td><span class="tag">3 locales distintos</span><br><small style="color:#888;">Planeamiento en proceso</small></td>
-          <td><span class="tag">Todo en un solo lugar</span><br><small style="color:#888;">Sin traslados</small></td>
           <td><span class="tag">2 locales</span><br><small style="color:#888;">Traslado caminando al post-almuerzo</small></td>
         </tr>
         <tr>
           <td class="left" style="font-weight:700;color:var(--navy);">Costo</td>
           <td><span class="tag green">S/ 200</span><br><small style="color:#888;">2 cuotas de S/100</small></td>
-          <td><span class="tag yellow">S/ 250</span><br><small style="color:#888;">3 cuotas (S/100, S/100, S/50)</small></td>
           <td><span class="tag red">S/ 300</span><br><small style="color:#888;">3 cuotas de S/100</small></td>
         </tr>
       </tbody>
@@ -790,41 +711,6 @@
     <div style="background:var(--white);border-radius:12px;border:1px solid rgba(201,168,76,0.2);overflow:hidden;box-shadow:0 2px 12px rgba(26,42,74,0.08);">
       <div style="background:var(--navy);padding:0.7rem 1.2rem;display:flex;align-items:center;gap:0.7rem;">
         <div class="option-badge" style="width:28px;height:28px;font-size:0.95rem;">2</div>
-        <span style="font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.95rem;font-weight:600;">Hacienda MonteRico</span>
-        <span style="margin-left:auto;color:var(--white);font-size:0.82rem;font-weight:700;">S/ 250</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-        <div style="padding:0.9rem 1.1rem;border-right:1px solid #f0ece0;">
-          <div style="font-size:0.75rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.5rem;">✔ A favor</div>
-          <ul style="list-style:none;padding:0;font-size:0.82rem;color:#444;line-height:1.7;">
-            <li>✦ Todo en un solo lugar, sin traslados</li>
-            <li>✦ Ambiente abierto y natural</li>
-            <li>✦ Buffet criollo variado, añade flexibilidad de elección de acuerdo al gusto de cada uno</li>
-            <li>✦ Corcho libre incluido</li>
-          </ul>
-        </div>
-        <div style="padding:0.9rem 1.1rem;">
-          <div style="font-size:0.75rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.5rem;">✖ En contra</div>
-          <ul style="list-style:none;padding:0;font-size:0.82rem;color:#444;line-height:1.7;">
-            <li>✦ No totalmente privado (otras reuniones en el recinto)</li>
-          </ul>
-        </div>
-      </div>
-      <div style="padding:0.6rem 1.1rem;background:#f9f7f1;border-top:1px solid #f0ece0;font-size:0.78rem;color:var(--gray);font-style:italic;">
-        📌 La ubicación del almuerzo y post-almuerzo es la misma de la reunión de dic. 2025
-      </div>
-      <div style="padding:0.6rem 1.1rem;background:#f9f7f1;border-top:1px solid #f0ece0;font-size:0.78rem;color:var(--gray);font-style:italic;">
-        📌 La ubicación para la misa y la presentación / video de la Prom XXXV es en un área privada asignada dentro de la Hacienda MonteRico para este fin, antes de pasar al área del almuerzo
-      </div>
-      <div style="padding:0.6rem 1.1rem;background:#f9f7f1;border-top:1px solid #f0ece0;font-size:0.78rem;color:var(--gray);font-style:italic;">
-        📌 El horario para esta opción es "de temprano a temprano": la misa empieza a las 11 am (no a las 12 pm como en las otras opciones), y la celebración termina a las 6 pm (no a las 8 pm como en las otras opciones)
-      </div>
-    </div>
-
-    <!-- Opción 3 -->
-    <div style="background:var(--white);border-radius:12px;border:1px solid rgba(201,168,76,0.2);overflow:hidden;box-shadow:0 2px 12px rgba(26,42,74,0.08);">
-      <div style="background:var(--navy);padding:0.7rem 1.2rem;display:flex;align-items:center;gap:0.7rem;">
-        <div class="option-badge" style="width:28px;height:28px;font-size:0.95rem;">3</div>
         <span style="font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.95rem;font-weight:600;">Real Club · San Telmo · Casa de Duilio</span>
         <span style="margin-left:auto;color:var(--white);font-size:0.82rem;font-weight:700;">S/ 300</span>
       </div>
@@ -868,7 +754,7 @@
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <div class="step-text">Emite tu voto eligiendo <strong style="color:var(--gold-light);">Opción 1</strong>, <strong style="color:var(--gold-light);">Opción 2</strong> u <strong style="color:var(--gold-light);">Opción 3</strong>.</div>
+      <div class="step-text">Emite tu voto eligiendo <strong style="color:var(--gold-light);">Opción 1</strong> o <strong style="color:var(--gold-light);">Opción 2</strong>.</div>
     </div>
 
     <div class="deadline-box">
