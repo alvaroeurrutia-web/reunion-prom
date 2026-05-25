@@ -422,6 +422,132 @@
       margin: 0.5rem 0;
     }
 
+    /* ── ESTATUS INSCRIPCIONES ── */
+    .inscripciones-section {
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 0 1.2rem 2rem;
+    }
+    .inscripciones-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(26,42,74,0.10);
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+    .inscripciones-header {
+      background: var(--navy);
+      padding: 1rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .inscripciones-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(0.85rem, 3vw, 1rem);
+      color: var(--gold-light);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .inscripciones-fecha {
+      font-size: 0.75rem;
+      color: rgba(201,168,76,0.7);
+      font-style: italic;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .inscripciones-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .inscripciones-col {
+      padding: 1rem 1.2rem;
+    }
+    .inscripciones-col:first-child {
+      border-right: 1px solid #f0ece0;
+    }
+    .inscripciones-col-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .inscripciones-col-title.confirmados { color: var(--green); }
+    .inscripciones-col-title.pendientes { color: var(--red); }
+    .inscripciones-col-title .dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-green { background: var(--green); }
+    .dot-red { background: var(--red); }
+    .inscripciones-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .inscripciones-list li {
+      font-size: 0.85rem;
+      color: #444;
+      padding: 0.22rem 0;
+      border-bottom: 1px solid #f5f3ee;
+      line-height: 1.35;
+    }
+    .inscripciones-list li:last-child { border-bottom: none; }
+    .inscripciones-totales {
+      background: var(--gold-pale);
+      border-top: 1px solid rgba(201,168,76,0.3);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .inscripciones-totales div {
+      padding: 0.6rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .inscripciones-totales div:first-child {
+      border-right: 1px solid rgba(201,168,76,0.3);
+    }
+    .badge-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0 4px;
+    }
+    .badge-green { background: var(--green-light); color: var(--green); }
+    .badge-red { background: var(--red-light); color: var(--red); }
+
+    .inscripciones-nota {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-style: italic;
+      padding: 0.7rem 1.2rem;
+      background: #f9f7f2;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-radius: 0 0 16px 16px;
+    }
+    .inscripciones-nota strong {
+      color: var(--navy);
+      font-style: normal;
+    }
+
     /* ── FOOTER ── */
     footer {
       text-align: center;
@@ -462,6 +588,127 @@
   </div>
 </div>
 
+<!-- ══ ESTATUS DE INSCRIPCIONES ══ -->
+<div class="inscripciones-section">
+  <h2 class="section-title">Estatus de Inscripciones</h2>
+  <div class="inscripciones-card">
+    <div class="inscripciones-header">
+      <h2>Asistencia confirmada al 24 de mayo de 2026</h2>
+    </div>
+    <div class="inscripciones-cols">
+      <!-- INSCRITOS -->
+      <div class="inscripciones-col">
+        <div class="inscripciones-col-title confirmados">
+          <span class="dot dot-green"></span> Inscritos
+        </div>
+        <ul class="inscripciones-list">
+          <li>Palao, Adolfo</li>
+          <li>Agois, Carlos</li>
+          <li>Barba, Ricardo</li>
+          <li>Bedoya, Mario</li>
+          <li>Bringas, Alfonso</li>
+          <li>Cáceres, Augusto</li>
+          <li>Correa, Fernando</li>
+          <li>Gavilano, Alfonso</li>
+          <li>Herrera, Joaquín</li>
+          <li>Len, Alfredo</li>
+          <li>Lomellini, Juan</li>
+          <li>Mongilardi, Jorge</li>
+          <li>Mongilardi, Mario</li>
+          <li>Montezuma, Alberto</li>
+          <li>Morales, Alvaro</li>
+          <li>Noel, Teodoro</li>
+          <li>Paz, Javier</li>
+          <li>Peschiera, Guillermo</li>
+          <li>Rivera, Alberto</li>
+          <li>Rodó, Juan Manuel</li>
+          <li>Rojas, Carlos</li>
+          <li>Rojas, José</li>
+          <li>Salkeld, Felipe</li>
+          <li>Sousa, Alejandro</li>
+          <li>Tapia, Henry</li>
+          <li>Urrutia, Alvaro</li>
+          <li>Vattuone, Roberto</li>
+          <li>Velarde, Javier</li>
+          <li>Zegarra, Willy</li>
+        </ul>
+      </div>
+      <!-- NO INSCRITOS -->
+      <div class="inscripciones-col">
+        <div class="inscripciones-col-title pendientes">
+          <span class="dot dot-red"></span> No Inscritos
+        </div>
+        <ul class="inscripciones-list">
+          <li>Abugattas, Paúl</li>
+          <li>Alberti, Renzo</li>
+          <li>Arce, Luis</li>
+          <li>Arizmendi, Guillermo</li>
+          <li>Baigorria, Ernesto</li>
+          <li>Ballero, Rómulo</li>
+          <li>Ballón, Carlos</li>
+          <li>Barrios, José</li>
+          <li>Barrós, José</li>
+          <li>Cabezas, Juan</li>
+          <li>Calderón, Gerardo</li>
+          <li>Correa, Raúl</li>
+          <li>Cortez, Pedro</li>
+          <li>De la Torre, Neptalí</li>
+          <li>De Martis, Carlos</li>
+          <li>Delfino, Giovanni</li>
+          <li>Escobar, César</li>
+          <li>Fernández, José</li>
+          <li>Gaillour, Alvaro</li>
+          <li>Gallese, Jorge</li>
+          <li>Gómez, Pablo</li>
+          <li>Jordán, Fritz</li>
+          <li>La Rosa, Adolfo</li>
+          <li>Montalbetti, Ernesto</li>
+          <li>Morales, Gustavo</li>
+          <li>Negrón, Federico</li>
+          <li>Pinasco, Renzo</li>
+          <li>Ramírez, Edgar</li>
+          <li>Rocha, Daniel</li>
+          <li>Romero, Julio</li>
+          <li>Saettone, Miguel</li>
+          <li>Saettone, Oscar</li>
+          <li>Saravia, Jorge</li>
+          <li>Suárez, Luis</li>
+          <li>Tapia, Rolando</li>
+          <li>Tommasini, Aldo</li>
+          <li>Tudela, Manuel</li>
+          <li>Urrutia, Duilio</li>
+          <li>Urrutia, Ernesto</li>
+          <li>Viani, Bruno</li>
+          <li>Vidal, Carlos</li>
+          <li>Wilson, Donald</li>
+        </ul>
+      </div>
+    </div>
+    <div class="inscripciones-totales">
+      <div>
+        <span class="badge-count badge-green">29</span> Inscritos
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CUOTAS DE PAGO ══ -->
+<div class="inscripciones-section">
+  <h2 class="section-title">Cuotas de Pago</h2>
+  <div class="inscripciones-card">
+    <div style="padding: 1rem 1.2rem;">
+      <div class="cuotas-title">Cuotas de pago</div>
+      <div class="cuotas">
+        <div><span>Cuota #1 (29 de mayo, a más tardar)</span><span>S/ 100</span></div>
+        <div><span>Cuota #2 (30 de junio, a más tardar)</span><span>S/ 100</span></div>
+        <div><span>Cuota #3 (31 de julio, a más tardar)</span><span>S/ 100</span></div>
+        <div class="total"><span>TOTAL</span><span>S/ 300</span></div>
+      </div>
+      <div class="cuotas-note">Se apreciará abonar las cuotas en los plazos indicados.</div>
+    </div>
+  </div>
+</div>
+
 <!-- ══ OPCION 2 ══ -->
 <div class="section" style="padding-top:1.2rem;">
   <h2 class="section-title">Programa del Día</h2>
@@ -487,8 +734,8 @@
       <div class="venue-name">Restaurante San Telmo – Real Club</div>
       <ul class="venue-list">
         <li><strong>Bebidas:</strong></li>
-        <li class="sub">02 Pisco Sour</li>
-        <li class="sub">02 vasos de Gaseosa o Agua mineral</li>
+        <li class="sub">02 Pisco Sour o Algarrobina</li>
+        <li class="sub">02 Vasos de gaseosa o agua embotellada</li>
         <li class="sub">Corcho libre</li>
         <li><strong>Piqueos:</strong></li>
         <li class="sub">Canapés de queso filadelfia y salmón ahumado</li>
@@ -496,15 +743,17 @@
         <li class="sub">Maki Furay</li>
         <li class="sub">Tapita de pulpo al grill</li>
         <li class="sub">Rollitos Primavera</li>
-        <li class="sub">Canasta de pan y mantequilla</li>
+        <li><strong>Canastas de pan y mantequilla</strong></li>
         <li><strong>Entrada:</strong></li>
         <li class="sub">Causa escabechada</li>
+        <li class="sub">Champiñones a la provenzal <strong>(opción vegana)</strong></li>
         <li><strong>Plato de Fondo:</strong></li>
-        <li class="sub">Lomo Enrollado – con prosciutto, queso y espinaca, salsa a las finas hierbas, arroz a la jardinera y legumbres</li>
+        <li class="sub">Lomo Enrollado. - (Lomo enrollado con prosciutto, queso y espinaca con salsa a las finas hierbas, servido con arroz a la jardinera y legumbres)</li>
+        <li class="sub">Lasagna vegetariana <strong>(opción vegana)</strong></li>
         <li><strong>Postre:</strong></li>
         <li class="sub">Tres Leches</li>
-        <li>Opción de cambiar platos para quienes no coman carne (aviso anticipado)</li>
-        <li>Traslado a Casa de Duilio (caminando)</li>
+        <li class="sub">Carrot Cake <strong>(opción vegana)</strong></li>
+        <li><div class="venue-note">Nota: El turno de almuerzo en el restaurante termina a las 5pm. Debemos empezar el traslado del restaurant a la casa de Duilio (caminando) a las 4:45pm</div></li>
       </ul>
     </div>
 
@@ -521,14 +770,6 @@
         <li class="sub">Música de nuestra época</li>
       </ul>
       <div class="venue-note">Mesas, menaje y servicio incluidos.</div>
-      <div class="cuotas-title">Cuotas de pago</div>
-      <div class="cuotas">
-        <div><span>Cuota #1 (29 de mayo)</span><span>S/ 100</span></div>
-        <div><span>Cuota #2 (30 de junio)</span><span>S/ 100</span></div>
-        <div><span>Cuota #3 (31 de julio)</span><span>S/ 100</span></div>
-        <div class="total"><span>TOTAL</span><span>S/ 300</span></div>
-      </div>
-      <div class="cuotas-note">Se apreciará abonar las cuotas en o antes de las fechas indicadas. Esto permitirá el flujo de caja necesario para el financiamiento de múltiples aspectos a lo largo del año.</div>
     </div>
   </div>
 </div>
