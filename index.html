@@ -459,15 +459,17 @@
       white-space: nowrap;
     }
     .inscripciones-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex !important;
+      flex-direction: column !important;
       gap: 0;
     }
     .inscripciones-col {
       padding: 1rem 1.2rem;
+      width: 100% !important;
     }
     .inscripciones-col:first-child {
-      border-right: 1px solid #f0ece0;
+      border-bottom: 1px solid #f0ece0;
+      border-right: none !important;
     }
     .inscripciones-col-title {
       font-family: 'Playfair Display', serif;
@@ -482,14 +484,71 @@
     }
     .inscripciones-col-title.confirmados { color: var(--green); }
     .inscripciones-col-title.pendientes { color: var(--red); }
-    .inscripciones-col-title .dot {
+    .inscripciones-col-title .dot,
+    .inscritos-table thead .dot {
       width: 9px; height: 9px;
       border-radius: 50%;
       flex-shrink: 0;
+      display: inline-block;
     }
     .dot-green { background: var(--green); }
     .dot-red { background: var(--red); }
-    .inscripciones-list {
+    .inscritos-table td:first-child,
+    .inscritos-table th:first-child {
+      white-space: nowrap;
+      width: 45%;
+    }
+    .inscritos-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      font-family: 'Lato', sans-serif;
+    }
+    .inscritos-table thead tr {
+      display: table-row;
+      background: none;
+    }
+    .inscritos-table thead th {
+      font-weight: 700;
+      padding: 4px 8px;
+    }
+    .inscritos-table th {
+      padding: 6px 8px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+    }
+    .inscritos-table th:not(:first-child) {
+      text-align: center;
+    }
+    .inscritos-table td {
+      padding: 5px 8px;
+      color: var(--navy);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .inscritos-table tbody tr:nth-child(even) {
+      background: rgba(201,168,76,0.07);
+    }
+    .inscritos-table tbody tr:hover {
+      background: rgba(201,168,76,0.15);
+    }
+    .inscritos-table td.monto {
+      text-align: center;
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+    .inscritos-table td.pagado {
+      width: 70px;
+      text-align: center !important;
+      padding-left: 0;
+      padding-right: 30px;
+    }
+    .inscritos-table td.vence {
+      font-weight: 700;
+      width: 90px;
+      text-align: center;
+    }
       list-style: none;
       padding: 0;
       margin: 0;
@@ -590,98 +649,106 @@
 
 <!-- ══ ESTATUS DE INSCRIPCIONES ══ -->
 <div class="inscripciones-section">
-  <h2 class="section-title">Estado de Inscripciones</h2>
+  <h2 class="section-title">Estado de Inscripciones y Pagos</h2>
   <div class="inscripciones-card">
-    <div class="inscripciones-header">
-      <h2>Asistencia confirmada al 29 de mayo de 2026</h2>
-    </div>
     <div class="inscripciones-cols">
       <!-- INSCRITOS -->
       <div class="inscripciones-col">
-        <div class="inscripciones-col-title confirmados">
-          <span class="dot dot-green"></span> Inscritos
-        </div>
-        <ul class="inscripciones-list">
-          <li>Alberti, Renzo</li>
-          <li>Palao, Adolfo</li>
-          <li>Abugattas, Paúl</li>
-          <li>Agois, Carlos</li>
-          <li>Baigorria, Ernesto</li>
-          <li>Barba, Ricardo</li>
-          <li>Barrós, José</li>
-          <li>Bedoya, Mario</li>
-          <li>Bringas, Alfonso</li>
-          <li>Cáceres, Augusto</li>
-          <li>Calderón, Gerardo</li>
-          <li>Correa, Fernando</li>
-          <li>De la Torre, Neptalí</li>
-          <li>Fernández, José</li>
-          <li>Gaillour, Alvaro</li>
-          <li>Gallese, Jorge</li>
-          <li>Gavilano, Alfonso</li>
-          <li>Herrera, Joaquín</li>
-          <li>Jordán, Fritz</li>
-          <li>Len, Alfredo</li>
-          <li>Lomellini, Juan</li>
-          <li>Mongilardi, Jorge</li>
-          <li>Mongilardi, Mario</li>
-          <li>Montezuma, Alberto</li>
-          <li>Morales, Alvaro</li>
-          <li>Negrón, Federico</li>
-          <li>Noel, Teodoro</li>
-          <li>Paz, Javier</li>
-          <li>Peschiera, Guillermo</li>
-          <li>Ramírez, Edgar</li>
-          <li>Rivera, Alberto</li>
-          <li>Rodó, Juan Manuel</li>
-          <li>Rojas, Carlos</li>
-          <li>Rojas, José</li>
-          <li>Romero, Julio</li>
-          <li>Salkeld, Felipe</li>
-          <li>Saravia, Jorge</li>
-          <li>Sousa, Alejandro</li>
-          <li>Tapia, Henry</li>
-          <li>Tudela, Manuel</li>
-          <li>Urrutia, Alvaro</li>
-          <li>Urrutia, Duilio</li>
-          <li>Vattuone, Roberto</li>
-          <li>Velarde, Javier</li>
-          <li>Viani, Bruno</li>
-          <li>Vidal, Carlos</li>
-          <li>Wilson, Donald</li>
-          <li>Zegarra, Willy</li>
-        </ul>
+        <table class="inscritos-table">
+          <thead>
+            <tr>
+              <th style="font-family:'Playfair Display',serif; font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--green); padding-bottom:0.7rem; padding-left:0;">
+                <span style="display:inline-flex; align-items:center; gap:0.4rem;"><span class="dot dot-green"></span> Inscritos</span>
+              </th>
+              <th style="text-align:center; color:#000; text-decoration:underline; font-size:0.75rem; background:none; font-family:'Lato',sans-serif; padding-right:30px; white-space:nowrap;">Pagado</th>
+              <th style="text-align:center; color:#000; text-decoration:underline; font-size:0.75rem; background:none; font-family:'Lato',sans-serif; white-space:nowrap; font-weight:700;">Vence 30 de Junio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Abugattas, Paúl</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Agois, Carlos</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Alberti, Renzo</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Baigorria, Ernesto</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Barba, Ricardo</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Barrós, José</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Bedoya, Mario</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Bringas, Alfonso</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Cáceres, Augusto</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Calderón, Gerardo</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Correa, Fernando</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>De la Torre, Neptalí</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Fernández, José</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Gaillour, Alvaro</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Gallese, Jorge</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Gavilano, Alfonso</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Herrera, Joaquín</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Jordán, Fritz</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Len, Alfredo</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Lomellini, Juan</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Mongilardi, Jorge</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Mongilardi, Mario</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Montezuma, Alberto</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Morales, Alvaro</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Negrón, Federico</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Noel, Teodoro</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Palao, Adolfo</td><td class="monto pagado">S/200</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Paz, Javier</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Peschiera, Guillermo</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Ramírez, Edgar</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Rivera, Alberto</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Rodó, Juan Manuel</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Rojas, Carlos</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Rojas, José</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Romero, Julio</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Salkeld, Felipe</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Saravia, Jorge</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Sousa, Alejandro</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Tapia, Henry</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Tudela, Manuel</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Urrutia, Alvaro</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Urrutia, Duilio</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Vattuone, Roberto</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Velarde, Javier</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Viani, Bruno</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+            <tr><td>Vidal, Carlos</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Wilson, Donald</td><td class="monto pagado">S/100</td><td class="monto vence">S/100</td></tr>
+            <tr><td>Zegarra, Willy</td><td class="monto pagado">S/300</td><td class="monto vence">S/0</td></tr>
+          </tbody>
+        </table>
       </div>
       <!-- NO INSCRITOS -->
       <div class="inscripciones-col">
         <div class="inscripciones-col-title pendientes">
-          <span class="dot dot-red"></span> No Inscritos
+          <span class="dot dot-red"></span> <span style="flex:1;">No Inscritos</span>
         </div>
-        <ul class="inscripciones-list">
-          <li>Arce, Luis</li>
-          <li>Arizmendi, Guillermo</li>
-          <li>Ballero, Rómulo</li>
-          <li>Ballón, Carlos</li>
-          <li>Barrios, José</li>
-          <li>Cabezas, Juan</li>
-          <li>Correa, Raúl</li>
-          <li>Cortez, Pedro</li>
-          <li>De Martis, Carlos</li>
-          <li>Delfino, Giovanni</li>
-          <li>Escobar, César</li>
-          <li>Gómez, Pablo</li>
-          <li>La Rosa, Adolfo</li>
-          <li>Montalbetti, Ernesto</li>
-          <li>Morales, Gustavo</li>
-          <li>Pinasco, Renzo</li>
-          <li>Rocha, Daniel</li>
-          <li>Saettone, Miguel</li>
-          <li>Saettone, Oscar</li>
-          <li>Suárez, Luis</li>
-          <li>Tapia, Rolando</li>
-          <li>Tommasini, Aldo</li>
-          <li>Urrutia, Ernesto</li>
-        </ul>
+        <table class="inscritos-table">
+          <thead></thead>
+          <tbody>
+            <tr><td>Arce, Luis</td></tr>
+            <tr><td>Arizmendi, Guillermo</td></tr>
+            <tr><td>Ballero, Rómulo</td></tr>
+            <tr><td>Ballón, Carlos</td></tr>
+            <tr><td>Barrios, José</td></tr>
+            <tr><td>Cabezas, Juan</td></tr>
+            <tr><td>Correa, Raúl</td></tr>
+            <tr><td>Cortez, Pedro</td></tr>
+            <tr><td>De Martis, Carlos</td></tr>
+            <tr><td>Delfino, Giovanni</td></tr>
+            <tr><td>Escobar, César</td></tr>
+            <tr><td>Gómez, Pablo</td></tr>
+            <tr><td>La Rosa, Adolfo</td></tr>
+            <tr><td>Montalbetti, Ernesto</td></tr>
+            <tr><td>Morales, Gustavo</td></tr>
+            <tr><td>Pinasco, Renzo</td></tr>
+            <tr><td>Rocha, Daniel</td></tr>
+            <tr><td>Saettone, Miguel</td></tr>
+            <tr><td>Saettone, Oscar</td></tr>
+            <tr><td>Suárez, Luis</td></tr>
+            <tr><td>Tapia, Rolando</td></tr>
+            <tr><td>Tommasini, Aldo</td></tr>
+            <tr><td>Urrutia, Ernesto</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="inscripciones-totales">
